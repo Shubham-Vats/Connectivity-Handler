@@ -95,7 +95,7 @@ class _SecondScreenState extends State<SecondScreen> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20.0),
                         gradient: LinearGradient(
-                          colors: [Colors.orange, Colors.deepOrange],
+                          colors: [Colors.pinkAccent, Colors.deepPurple,],
                           begin: Alignment.topCenter,
                           end: Alignment.bottomCenter
                         )
@@ -185,7 +185,7 @@ class _SecondScreenState extends State<SecondScreen> {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(100.0),
                             gradient: LinearGradient(
-                              colors: [Colors.orange, Colors.deepOrange]
+                              colors: [Colors.pinkAccent, Colors.deepPurple,],
                             ),
                           ),
                           height: 90.0,
