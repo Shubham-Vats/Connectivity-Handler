@@ -85,7 +85,7 @@ class _FirstScreenState extends State<FirstScreen> {
                           Navigator.of(context).push(MaterialPageRoute(builder: (context)=>SecondScreen(trackId: snapshot.data[index]["track"]["track_id"],)));
                         },
                         child: Material(
-                          elevation: 30.0,
+                          elevation: 20.0,
                           shadowColor: Colors.red,
                           borderRadius: BorderRadius.circular(15.0),
                           child: Container(
