@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:connectivity/connectivity.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'SecondScreen.dart';
 
-String resultdata='';
-var colorsVal = Colors.white;
+String resultdata = '';
 Map data;
 List necessaryData;
 
@@ -82,6 +82,7 @@ class _FirstScreenState extends State<FirstScreen> {
                       padding: const EdgeInsets.all(8.0),
                       child: GestureDetector(
                         onTap: (){
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context)=>SecondScreen(trackId: snapshot.data[index]["track"]["track_id"],)));
                         },
                         child: Container(
                           height:100,
