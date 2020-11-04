@@ -84,43 +84,48 @@ class _FirstScreenState extends State<FirstScreen> {
                         onTap: (){
                           Navigator.of(context).push(MaterialPageRoute(builder: (context)=>SecondScreen(trackId: snapshot.data[index]["track"]["track_id"],)));
                         },
-                        child: Container(
-                          height:100,
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                              colors: [Colors.orange, Colors.deepOrange],
-                              begin: Alignment.topCenter,
-                              end: Alignment.bottomCenter
+                        child: Material(
+                          elevation: 30.0,
+                          shadowColor: Colors.red,
+                          borderRadius: BorderRadius.circular(15.0),
+                          child: Container(
+                            height:100,
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                colors: [Colors.orange, Colors.deepOrange],
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter
+                              ),
+                              borderRadius: BorderRadius.circular(15.0),
                             ),
-                            borderRadius: BorderRadius.circular(15.0)
-                          ),
-                          child: Row(
-                            children: <Widget>[
-                              Padding(
-                                  padding: const EdgeInsets.only(left:15.0),
-                                  child: Icon(Icons.my_library_music,color: Colors.black45,size: 25.0,),
-                                ),
-                              Expanded(
-                                flex: 3,
-                                child: Padding(
-                                  padding: const EdgeInsets.only(left:25.0,right: 25.0),
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: <Widget>[
-                                      Text("${snapshot.data[index]["track"]["track_name"]}", style: TextStyle(fontSize: 17.0),maxLines: 2,),
-                                      Text("${snapshot.data[index]["track"]["album_name"]}", style: TextStyle(fontSize: 14.0,color: Colors.black45),),
-                                    ],
+                            child: Row(
+                              children: <Widget>[
+                                Padding(
+                                    padding: const EdgeInsets.all(15.0),
+                                    child: Icon(Icons.my_library_music, color: Colors.black45, size: 25.0,),
+                                  ),
+                                Expanded(
+                                  flex: 3,
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(left:20.0,right: 25.0),
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Text("${snapshot.data[index]["track"]["track_name"]}", style: TextStyle(fontSize: 17.0), maxLines: 2,),
+                                        Text("${snapshot.data[index]["track"]["album_name"]}", style: TextStyle(fontSize: 14.0, color: Colors.black45),),
+                                      ],
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Expanded(
-                                child: Padding(
-                                  padding: const EdgeInsets.only(right:15.0),
-                                  child: Text("${snapshot.data[index]["track"]["artist_name"]}", style: TextStyle(fontSize: 13.0)),
-                                )
-                              ),
-                            ],
+                                Expanded(
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(right:15.0),
+                                    child: Text("${snapshot.data[index]["track"]["artist_name"]}", style: TextStyle(fontSize: 14.0)),
+                                  )
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
